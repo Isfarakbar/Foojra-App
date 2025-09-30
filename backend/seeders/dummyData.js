@@ -39,48 +39,48 @@ const seedUsers = async () => {
       email: 'admin@foojra.com',
       password: await bcrypt.hash('admin123', 10),
       role: 'admin',
-      phone: '+1234567890',
-      address: '123 Admin Street, Admin City, AC 12345, USA'
+      phone: '+923001234567',
+      address: '123 Admin Street, Lahore, Punjab, Pakistan'
     },
     {
       name: 'John Doe',
       email: 'john@example.com',
       password: await bcrypt.hash('password123', 10),
       role: 'customer',
-      phone: '+1234567891',
-      address: '456 Customer Ave, Customer City, CC 12346, USA'
+      phone: '+923001234568',
+      address: '456 Customer Ave, Rawalpindi, Punjab, Pakistan'
     },
     {
       name: 'Jane Smith',
       email: 'jane@example.com',
       password: await bcrypt.hash('password123', 10),
       role: 'customer',
-      phone: '+1234567892',
-      address: '789 User Blvd, User City, UC 12347, USA'
+      phone: '+923001234569',
+      address: '789 User Blvd, Karachi, Sindh, Pakistan'
     },
     {
       name: 'Mike Johnson',
       email: 'mike@restaurant.com',
       password: await bcrypt.hash('password123', 10),
       role: 'shopOwner',
-      phone: '+1234567893',
-      address: '321 Owner Street, Owner City, OC 12348, USA'
+      phone: '+923001234570',
+      address: '321 Owner Street, Islamabad, Pakistan'
     },
     {
       name: 'Sarah Wilson',
       email: 'sarah@cafe.com',
       password: await bcrypt.hash('password123', 10),
       role: 'shopOwner',
-      phone: '+1234567894',
-      address: '654 Cafe Lane, Cafe City, CF 12349, USA'
+      phone: '+923001234571',
+      address: '654 Cafe Lane, Lahore, Punjab, Pakistan'
     },
     {
       name: 'David Brown',
       email: 'david@pizza.com',
       password: await bcrypt.hash('password123', 10),
       role: 'shopOwner',
-      phone: '+1234567895',
-      address: '987 Pizza Road, Pizza Town, PT 12350, USA'
+      phone: '+923001234572',
+      address: '987 Pizza Road, Faisalabad, Punjab, Pakistan'
     }
   ];
 
@@ -99,9 +99,19 @@ const seedShops = async (users) => {
       category: 'Restaurant',
       cuisine: 'American',
       owner: shopOwners[0]._id,
-      address: '100 Grill Street, Foodie City, FC 54321, USA',
-      phone: '+1234567896',
-      email: 'contact@mikesgrill.com',
+      address: {
+        street: '100 Grill Street',
+        area: 'Commercial Area',
+        city: 'Gojra',
+        postalCode: '35250'
+      },
+      phone: '+923001234573',
+      businessInfo: {
+        businessName: "Mike's Grill House",
+        businessType: 'Restaurant',
+        ownerName: 'Mike Johnson',
+        ownerCNIC: '12345-1234567-1'
+      },
       approvalStatus: 'approved',
       rating: 4.5,
       totalReviews: 25
@@ -109,12 +119,22 @@ const seedShops = async (users) => {
     {
       name: "Sarah's Cozy Cafe",
       description: "Artisan coffee, fresh pastries, and a warm atmosphere perfect for work or relaxation",
-      category: 'Restaurant',
+      category: 'Cafe',
       cuisine: 'Coffee & Pastries',
       owner: shopOwners[1]._id,
-      address: '200 Coffee Lane, Brew City, BC 54322, USA',
-      phone: '+1234567897',
-      email: 'hello@sarahscafe.com',
+      address: {
+        street: '200 Coffee Lane',
+        area: 'Main Bazaar',
+        city: 'Gojra',
+        postalCode: '35250'
+      },
+      phone: '+923001234574',
+      businessInfo: {
+        businessName: "Sarah's Cozy Cafe",
+        businessType: 'Cafe',
+        ownerName: 'Sarah Wilson',
+        ownerCNIC: '12345-1234567-2'
+      },
       approvalStatus: 'approved',
       rating: 4.7,
       totalReviews: 18
@@ -125,9 +145,19 @@ const seedShops = async (users) => {
       category: 'Restaurant',
       cuisine: 'Italian',
       owner: shopOwners[2]._id,
-      address: '300 Pizza Avenue, Italian Quarter, IQ 54323, USA',
-      phone: '+1234567898',
-      email: 'orders@davidspizza.com',
+      address: {
+        street: '300 Pizza Avenue',
+        area: 'Food Street',
+        city: 'Gojra',
+        postalCode: '35250'
+      },
+      phone: '+923001234575',
+      businessInfo: {
+        businessName: "David's Pizza Palace",
+        businessType: 'Restaurant',
+        ownerName: 'David Brown',
+        ownerCNIC: '12345-1234567-3'
+      },
       approvalStatus: 'approved',
       rating: 4.3,
       totalReviews: 32
@@ -145,7 +175,7 @@ const seedMenuItems = async (shops) => {
     {
       name: 'Premium Ribeye Steak',
       description: '12oz prime ribeye steak grilled to perfection, served with garlic mashed potatoes and seasonal vegetables',
-      price: 32.99,
+      basePrice: 32.99,
       category: 'Main Course',
       shop: shops[0]._id,
       isAvailable: true,
@@ -161,7 +191,7 @@ const seedMenuItems = async (shops) => {
     {
       name: 'Grilled Salmon',
       description: 'Fresh Atlantic salmon with lemon herb butter, quinoa pilaf, and grilled asparagus',
-      price: 28.99,
+      basePrice: 28.99,
       category: 'Main Course',
       shop: shops[0]._id,
       isAvailable: true,
@@ -177,7 +207,7 @@ const seedMenuItems = async (shops) => {
     {
       name: 'Caesar Salad',
       description: 'Crisp romaine lettuce, parmesan cheese, croutons, and our signature Caesar dressing',
-      price: 14.99,
+      basePrice: 14.99,
       category: 'Appetizer',
       shop: shops[0]._id,
       isAvailable: true,
@@ -193,7 +223,7 @@ const seedMenuItems = async (shops) => {
     {
       name: 'Chocolate Lava Cake',
       description: 'Warm chocolate cake with molten center, served with vanilla ice cream',
-      price: 9.99,
+      basePrice: 9.99,
       category: 'Dessert',
       shop: shops[0]._id,
       isAvailable: true,
@@ -211,7 +241,7 @@ const seedMenuItems = async (shops) => {
     {
       name: 'Artisan Cappuccino',
       description: 'Rich espresso with perfectly steamed milk and beautiful latte art',
-      price: 4.99,
+      basePrice: 4.99,
       category: 'Beverage',
       shop: shops[1]._id,
       isAvailable: true,
@@ -227,7 +257,7 @@ const seedMenuItems = async (shops) => {
     {
       name: 'Avocado Toast',
       description: 'Multigrain bread topped with smashed avocado, cherry tomatoes, and feta cheese',
-      price: 12.99,
+      basePrice: 12.99,
       category: 'Main Course',
       shop: shops[1]._id,
       isAvailable: true,
@@ -243,7 +273,7 @@ const seedMenuItems = async (shops) => {
     {
       name: 'Blueberry Muffin',
       description: 'Fresh baked muffin loaded with juicy blueberries and a hint of lemon',
-      price: 3.99,
+      basePrice: 3.99,
       category: 'Dessert',
       shop: shops[1]._id,
       isAvailable: true,
@@ -259,7 +289,7 @@ const seedMenuItems = async (shops) => {
     {
       name: 'Green Smoothie',
       description: 'Spinach, banana, mango, and coconut water blend for a healthy boost',
-      price: 7.99,
+      basePrice: 7.99,
       category: 'Beverage',
       shop: shops[1]._id,
       isAvailable: true,
@@ -277,7 +307,7 @@ const seedMenuItems = async (shops) => {
     {
       name: 'Margherita Pizza',
       description: 'Classic pizza with San Marzano tomatoes, fresh mozzarella, and basil',
-      price: 18.99,
+      basePrice: 18.99,
       category: 'Main Course',
       shop: shops[2]._id,
       isAvailable: true,
@@ -293,7 +323,7 @@ const seedMenuItems = async (shops) => {
     {
       name: 'Pepperoni Supreme',
       description: 'Loaded with pepperoni, Italian sausage, mushrooms, and bell peppers',
-      price: 22.99,
+      basePrice: 22.99,
       category: 'Main Course',
       shop: shops[2]._id,
       isAvailable: true,
@@ -309,7 +339,7 @@ const seedMenuItems = async (shops) => {
     {
       name: 'Garlic Breadsticks',
       description: 'Warm breadsticks brushed with garlic butter and served with marinara sauce',
-      price: 8.99,
+      basePrice: 8.99,
       category: 'Appetizer',
       shop: shops[2]._id,
       isAvailable: true,
@@ -325,7 +355,7 @@ const seedMenuItems = async (shops) => {
     {
       name: 'Tiramisu',
       description: 'Traditional Italian dessert with coffee-soaked ladyfingers and mascarpone',
-      price: 7.99,
+      basePrice: 7.99,
       category: 'Dessert',
       shop: shops[2]._id,
       isAvailable: true,
@@ -350,118 +380,156 @@ const seedOrders = async (users, shops, menuItems) => {
   
   const orders = [
     {
+      orderNumber: 'ORD-001-' + Date.now(),
       user: customers[0]._id,
       shop: shops[0]._id,
       orderItems: [
         {
           menuItem: menuItems[0]._id,
           name: menuItems[0].name,
-          price: menuItems[0].price,
+          basePrice: menuItems[0].basePrice,
+          totalPrice: menuItems[0].basePrice,
           quantity: 1
         },
         {
           menuItem: menuItems[2]._id,
           name: menuItems[2].name,
-          price: menuItems[2].price,
+          basePrice: menuItems[2].basePrice,
+          totalPrice: menuItems[2].basePrice,
           quantity: 1
         }
       ],
-      totalAmount: 47.98,
+      deliveryAddress: {
+        fullName: 'Jane Smith',
+        phone: '+923001234568',
+        address: '456 Customer Ave',
+        area: 'Model Town',
+        city: 'Gojra',
+        postalCode: '35250'
+      },
+      orderSummary: {
+        itemsPrice: 47.98,
+        taxPrice: 0,
+        deliveryFee: 50,
+        totalPrice: 97.98
+      },
       status: 'Delivered',
       isPaid: true,
-      shippingAddress: {
-        address: '456 Customer Ave',
-        city: 'Customer City',
-        postalCode: '12346',
-        country: 'USA'
-      },
-      orderDate: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000), // 2 days ago
-      deliveredAt: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000 + 45 * 60 * 1000)
+      paymentMethod: 'Cash on Delivery'
     },
     {
+      orderNumber: 'ORD-002-' + Date.now(),
       user: customers[1]._id,
       shop: shops[1]._id,
       orderItems: [
         {
           menuItem: menuItems[4]._id,
           name: menuItems[4].name,
-          price: menuItems[4].price,
+          basePrice: menuItems[4].basePrice,
+          totalPrice: menuItems[4].basePrice * 2,
           quantity: 2
         },
         {
           menuItem: menuItems[5]._id,
           name: menuItems[5].name,
-          price: menuItems[5].price,
+          basePrice: menuItems[5].basePrice,
+          totalPrice: menuItems[5].basePrice,
           quantity: 1
         }
       ],
-      totalAmount: 22.97,
+      deliveryAddress: {
+        fullName: 'Mike Johnson',
+        phone: '+923001234569',
+        address: '789 User Blvd',
+        area: 'Satellite Town',
+        city: 'Gojra',
+        postalCode: '35250'
+      },
+      orderSummary: {
+        itemsPrice: 22.97,
+        taxPrice: 0,
+        deliveryFee: 50,
+        totalPrice: 72.97
+      },
       status: 'Delivered',
       isPaid: true,
-      shippingAddress: {
-        address: '789 User Blvd',
-        city: 'User City',
-        postalCode: '12347',
-        country: 'USA'
-      },
-      orderDate: new Date(Date.now() - 1 * 24 * 60 * 60 * 1000), // 1 day ago
-      deliveredAt: new Date(Date.now() - 1 * 24 * 60 * 60 * 1000 + 30 * 60 * 1000)
+      paymentMethod: 'JazzCash'
     },
     {
+      orderNumber: 'ORD-003-' + Date.now(),
       user: customers[0]._id,
       shop: shops[2]._id,
       orderItems: [
         {
           menuItem: menuItems[8]._id,
           name: menuItems[8].name,
-          price: menuItems[8].price,
+          basePrice: menuItems[8].basePrice,
+          totalPrice: menuItems[8].basePrice,
           quantity: 1
         },
         {
           menuItem: menuItems[10]._id,
           name: menuItems[10].name,
-          price: menuItems[10].price,
+          basePrice: menuItems[10].basePrice,
+          totalPrice: menuItems[10].basePrice,
           quantity: 1
         }
       ],
-      totalAmount: 27.98,
-      status: 'Processing',
-      isPaid: true,
-      shippingAddress: {
+      deliveryAddress: {
+        fullName: 'Jane Smith',
+        phone: '+923001234568',
         address: '456 Customer Ave',
-        city: 'Customer City',
-        postalCode: '12346',
-        country: 'USA'
+        area: 'Model Town',
+        city: 'Gojra',
+        postalCode: '35250'
       },
-      orderDate: new Date(Date.now() - 2 * 60 * 60 * 1000) // 2 hours ago
+      orderSummary: {
+        itemsPrice: 27.98,
+        taxPrice: 0,
+        deliveryFee: 50,
+        totalPrice: 77.98
+      },
+      status: 'Preparing',
+      isPaid: true,
+      paymentMethod: 'EasyPaisa'
     },
     {
+      orderNumber: 'ORD-004-' + Date.now(),
       user: customers[1]._id,
       shop: shops[0]._id,
       orderItems: [
         {
           menuItem: menuItems[1]._id,
           name: menuItems[1].name,
-          price: menuItems[1].price,
+          basePrice: menuItems[1].basePrice,
+          totalPrice: menuItems[1].basePrice,
           quantity: 1
         },
         {
           menuItem: menuItems[3]._id,
           name: menuItems[3].name,
-          price: menuItems[3].price,
+          basePrice: menuItems[3].basePrice,
+          totalPrice: menuItems[3].basePrice,
           quantity: 1
         }
       ],
-      totalAmount: 38.98,
+      deliveryAddress: {
+        fullName: 'Mike Johnson',
+        phone: '+923001234569',
+        address: '789 User Blvd',
+        area: 'Satellite Town',
+        city: 'Gojra',
+        postalCode: '35250'
+      },
+      orderSummary: {
+        itemsPrice: 38.98,
+        taxPrice: 0,
+        deliveryFee: 50,
+        totalPrice: 88.98
+      },
       status: 'Pending',
       isPaid: true,
-      shippingAddress: {
-        address: '789 User Blvd',
-        city: 'User City',
-        postalCode: '12347',
-        country: 'USA'
-      },
-      orderDate: new Date(Date.now() - 30 * 60 * 1000) // 30 minutes ago
+      paymentMethod: 'Cash on Delivery'
     }
   ];
 
