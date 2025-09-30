@@ -1,0 +1,50 @@
+[
+  {
+    "_id": "menu001",
+    "name": "Margherita Pizza",
+    "description": "Classic pizza with tomato sauce, mozzarella, and fresh basil",
+    "price": 12.99,
+    "category": "Pizza",
+    "shop": "shop001",
+    "image": "https://via.placeholder.com/300x200?text=Margherita+Pizza",
+    "isVegetarian": true,
+    "isVegan": false,
+    "isGlutenFree": false,
+    "prepTime": "15-20 mins",
+    "isAvailable": true,
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "menu002",
+    "name": "Pepperoni Pizza",
+    "description": "Classic pizza with tomato sauce, mozzarella, and pepperoni",
+    "price": 14.99,
+    "category": "Pizza",
+    "shop": "shop001",
+    "image": "https://via.placeholder.com/300x200?text=Pepperoni+Pizza",
+    "isVegetarian": false,
+    "isVegan": false,
+    "isGlutenFree": false,
+    "prepTime": "15-20 mins",
+    "isAvailable": true,
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "menu003",
+    "name": "Classic Burger",
+    "description": "Beef patty with lettuce, tomato, onion, and special sauce",
+    "price": 8.99,
+    "category": "Burgers",
+    "shop": "shop002",
+    "image": "https://via.placeholder.com/300x200?text=Classic+Burger",
+    "isVegetarian": false,
+    "isVegan": false,
+    "isGlutenFree": false,
+    "prepTime": "10-15 mins",
+    "isAvailable": true,
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  }
+]

@@ -1,0 +1,58 @@
+<svg width="500" height="400" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:0.9" />
+      <stop offset="50%" style="stop-color:#ffa500;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#ff1744;stop-opacity:0.9" />
+    </linearGradient>
+    <radialGradient id="plateGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f8f9fa;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="500" height="400" fill="url(#heroGradient)"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="100" cy="80" r="20" fill="#ffffff" opacity="0.1"/>
+  <circle cx="400" cy="120" r="15" fill="#ffffff" opacity="0.15"/>
+  <circle cx="450" cy="300" r="25" fill="#ffffff" opacity="0.1"/>
+  <circle cx="50" cy="350" r="18" fill="#ffffff" opacity="0.12"/>
+  
+  <!-- Main plate -->
+  <ellipse cx="250" cy="220" rx="120" ry="25" fill="#333" opacity="0.2"/>
+  <ellipse cx="250" cy="215" rx="115" ry="20" fill="url(#plateGradient)" stroke="#dee2e6" stroke-width="2"/>
+  
+  <!-- Food items -->
+  <!-- Pizza slice -->
+  <path d="M 180 180 L 220 160 L 200 200 Z" fill="#ffd700"/>
+  <circle cx="195" cy="175" r="3" fill="#ff6347"/>
+  <circle cx="205" cy="185" r="2" fill="#90ee90"/>
+  
+  <!-- Burger -->
+  <ellipse cx="280" cy="190" rx="25" ry="12" fill="#8b4513"/>
+  <ellipse cx="280" cy="185" rx="22" ry="8" fill="#90ee90"/>
+  <ellipse cx="280" cy="180" rx="20" ry="6" fill="#ff6347"/>
+  <ellipse cx="280" cy="175" rx="23" ry="10" fill="#daa520"/>
+  
+  <!-- Sushi -->
+  <ellipse cx="320" cy="200" rx="15" ry="8" fill="#ffffff"/>
+  <ellipse cx="320" cy="200" rx="12" ry="6" fill="#ff6347"/>
+  <rect x="315" y="195" width="10" height="2" fill="#228b22"/>
+  
+  <!-- Decorative food icons -->
+  <g transform="translate(150, 100)">
+    <circle cx="0" cy="0" r="8" fill="#ffffff" opacity="0.3"/>
+    <path d="M -4 -2 L 4 -2 L 2 4 L -2 4 Z" fill="#ff6b6b"/>
+  </g>
+  
+  <g transform="translate(350, 320)">
+    <circle cx="0" cy="0" r="10" fill="#ffffff" opacity="0.3"/>
+    <ellipse cx="0" cy="0" rx="6" ry="4" fill="#ffa500"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="250" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#ffffff" font-weight="bold">Foojra Food Delivery</text>
+  <text x="250" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" opacity="0.9">Delicious food at your doorstep</text>
+</svg>

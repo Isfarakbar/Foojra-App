@@ -1,0 +1,19 @@
+<svg width="1920" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#4ecdc4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#45b7d1;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#heroGradient)"/>
+  <circle cx="300" cy="150" r="80" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="1600" cy="400" r="120" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="800" cy="500" r="60" fill="rgba(255,255,255,0.1)"/>
+  <text x="960" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white">
+    Welcome to Foojra
+  </text>
+  <text x="960" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="rgba(255,255,255,0.9)">
+    Your favorite food delivery platform
+  </text>
+</svg>

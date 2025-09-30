@@ -1,0 +1,36 @@
+<svg width="300" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="shopGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a90e2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#357abd;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="300" height="200" fill="#f8f9fa"/>
+  
+  <!-- Building -->
+  <rect x="50" y="80" width="200" height="100" fill="url(#shopGradient)" rx="5"/>
+  <rect x="60" y="90" width="180" height="80" fill="#ffffff" stroke="#dee2e6" stroke-width="2" rx="3"/>
+  
+  <!-- Shop front -->
+  <rect x="70" y="100" width="160" height="60" fill="#e9ecef"/>
+  
+  <!-- Door -->
+  <rect x="130" y="130" width="40" height="30" fill="#6c757d" rx="2"/>
+  <circle cx="160" cy="145" r="2" fill="#ffd700"/>
+  
+  <!-- Windows -->
+  <rect x="80" y="110" width="30" height="15" fill="#87ceeb" stroke="#4a90e2" stroke-width="1"/>
+  <rect x="190" y="110" width="30" height="15" fill="#87ceeb" stroke="#4a90e2" stroke-width="1"/>
+  
+  <!-- Awning -->
+  <path d="M 60 100 L 240 100 L 230 90 L 70 90 Z" fill="#ff6b6b"/>
+  
+  <!-- Sign -->
+  <rect x="100" y="70" width="100" height="20" fill="#ffffff" stroke="#4a90e2" stroke-width="2" rx="3"/>
+  <text x="150" y="83" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#4a90e2" font-weight="bold">RESTAURANT</text>
+  
+  <!-- Text -->
+  <text x="150" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#6c757d">Shop Image</text>
+</svg>

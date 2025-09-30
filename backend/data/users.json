@@ -1,0 +1,82 @@
+[
+  {
+    "_id": "admin001",
+    "name": "Admin User",
+    "email": "admin@foojra.com",
+    "password": "$2a$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+    "role": "admin",
+    "phone": "+1234567890",
+    "address": "123 Admin Street, Admin City",
+    "isActive": true,
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "owner001",
+    "name": "Pizza Owner",
+    "email": "owner@pizzapalace.com",
+    "password": "$2a$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+    "role": "shopOwner",
+    "phone": "+1234567891",
+    "address": "123 Pizza Street, Food City",
+    "isActive": true,
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "owner002",
+    "name": "Burger Owner",
+    "email": "owner@burgerbarn.com",
+    "password": "$2a$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
+    "role": "shopOwner",
+    "phone": "+1234567892",
+    "address": "456 Burger Ave, Food City",
+    "isActive": true,
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "_id": "17591875034228ktbhmlly",
+    "name": "Isfar Akbar",
+    "email": "isfarakbar94@gmail.com",
+    "password": "$2a$10$9.Pc8NXxCXwWDwJFOe1ueOzhe0rS5mSLdnCJputsJzxpd4EeE/ugS",
+    "role": "shopOwner",
+    "phone": "03307180425",
+    "address": "Chak 364",
+    "createdAt": "2025-09-29T23:11:43.424Z",
+    "updatedAt": "2025-09-29T23:11:43.425Z"
+  },
+  {
+    "_id": "1759206140753ysanlu8kx",
+    "name": "Isfar",
+    "email": "aafaf@gmail.com",
+    "password": "$2a$10$x.p0SaFor9x5VEL8DmZnvevkrlrMKe5EmMXKbq9myGUzVgHrKMcBe",
+    "role": "customer",
+    "phone": "03307182345",
+    "address": "Pk 32",
+    "createdAt": "2025-09-30T04:22:20.754Z",
+    "updatedAt": "2025-09-30T04:22:20.754Z"
+  },
+  {
+    "_id": "175920802144181cdzo0h5",
+    "name": "Test Customer",
+    "email": "testcustomer@test.com",
+    "password": "$2a$10$A/Tkji1I0FS2CfXBrRLYPeAqpHIeXfuJU1uRYgfSZIGpLHrWYXzBy",
+    "role": "customer",
+    "phone": "1234567890",
+    "address": "123 Test Street",
+    "createdAt": "2025-09-30T04:53:41.441Z",
+    "updatedAt": "2025-09-30T04:53:41.442Z"
+  },
+  {
+    "_id": "17592080335076adqhh8pu",
+    "name": "Test Shop Owner",
+    "email": "testowner@test.com",
+    "password": "$2a$10$ez2YgxmRB64XJ8C88UaoN.ibinB8yflEjVjss8KhT3/LID6yMMvMe",
+    "role": "shopOwner",
+    "phone": "1234567891",
+    "address": "456 Shop Street",
+    "createdAt": "2025-09-30T04:53:53.507Z",
+    "updatedAt": "2025-09-30T04:53:53.507Z"
+  }
+]

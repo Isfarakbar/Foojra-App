@@ -1,0 +1,157 @@
+[
+  {
+    "_id": "order001",
+    "orderNumber": "ORD123456789",
+    "user": "1759206140753ysanlu8kx",
+    "shop": "shop001",
+    "orderItems": [
+      {
+        "menuItem": "menu001",
+        "name": "Margherita Pizza",
+        "quantity": 2,
+        "price": 12.99,
+        "total": 25.98
+      }
+    ],
+    "deliveryAddress": {
+      "street": "123 Main St",
+      "city": "Food City",
+      "area": "Downtown",
+      "postalCode": "12345",
+      "phone": "03307182345"
+    },
+    "paymentMethod": "Cash on Delivery",
+    "orderSummary": {
+      "itemsPrice": 25.98,
+      "deliveryFee": 2.99,
+      "totalPrice": 28.97
+    },
+    "status": "delivered",
+    "isPaid": true,
+    "paidAt": "2024-01-15T10:30:00.000Z",
+    "isDelivered": true,
+    "deliveredAt": "2024-01-15T11:00:00.000Z",
+    "createdAt": "2024-01-15T09:00:00.000Z",
+    "updatedAt": "2024-01-15T11:00:00.000Z"
+  },
+  {
+    "_id": "order002",
+    "orderNumber": "ORD123456790",
+    "user": "1759206140753ysanlu8kx",
+    "shop": "shop002",
+    "orderItems": [
+      {
+        "menuItem": "menu003",
+        "name": "Classic Burger",
+        "quantity": 1,
+        "price": 8.99,
+        "total": 8.99
+      }
+    ],
+    "deliveryAddress": {
+      "street": "456 Oak Ave",
+      "city": "Food City",
+      "area": "Uptown",
+      "postalCode": "12346",
+      "phone": "03307182345"
+    },
+    "paymentMethod": "Credit Card",
+    "orderSummary": {
+      "itemsPrice": 8.99,
+      "deliveryFee": 1.99,
+      "totalPrice": 10.98
+    },
+    "status": "pending",
+    "isPaid": false,
+    "isDelivered": false,
+    "createdAt": "2024-01-16T14:00:00.000Z",
+    "updatedAt": "2024-01-16T14:00:00.000Z"
+  },
+  {
+    "_id": "1759226335130",
+    "orderNumber": "ORD335129823",
+    "user": "175920802144181cdzo0h5",
+    "shop": "shop003",
+    "orderItems": [
+      {
+        "menuItem": "menu001",
+        "price": 12.99,
+        "quantity": 2,
+        "name": "Margherita Pizza",
+        "images": [
+          null
+        ]
+      },
+      {
+        "menuItem": "menu002",
+        "price": 14.99,
+        "quantity": 1,
+        "name": "Pepperoni Pizza",
+        "images": [
+          null
+        ]
+      }
+    ],
+    "deliveryAddress": {
+      "country": "USA",
+      "street": "123 Main St",
+      "state": "NY",
+      "zipCode": "10001",
+      "city": "New York"
+    },
+    "paymentMethod": "credit_card",
+    "orderSummary": {
+      "tax": 3.6,
+      "deliveryFee": 3.99,
+      "itemsPrice": 40.97,
+      "totalPrice": 48.56
+    },
+    "preparationTime": 30,
+    "estimatedDeliveryTime": "2025-09-30T10:48:55.129Z",
+    "status": "Preparing",
+    "statusHistory": [
+      {
+        "status": "Pending",
+        "timestamp": "2025-09-30T09:58:55.130Z",
+        "note": "Order placed successfully",
+        "updatedBy": "customer"
+      },
+      {
+        "status": "Confirmed",
+        "timestamp": "2025-09-30T10:09:49.846Z",
+        "note": "Order confirmed by shop owner",
+        "updatedBy": "shop"
+      },
+      {
+        "status": "Preparing",
+        "timestamp": "2025-09-30T10:10:34.242Z",
+        "note": "Order is being prepared in the kitchen",
+        "updatedBy": "shop"
+      }
+    ],
+    "isPaid": false,
+    "isDelivered": false,
+    "refundStatus": "None",
+    "trackingUpdates": [
+      {
+        "message": "Order placed successfully",
+        "timestamp": "2025-09-30T09:58:55.130Z"
+      },
+      {
+        "message": "Your order has been confirmed and is being prepared",
+        "timestamp": "2025-09-30T10:09:49.846Z"
+      },
+      {
+        "message": "Your order is being prepared by the restaurant",
+        "timestamp": "2025-09-30T10:10:34.242Z"
+      },
+      {
+        "message": "Chef has started preparing your pizza with fresh ingredients",
+        "timestamp": "2025-09-30T10:11:13.819Z",
+        "location": null
+      }
+    ],
+    "createdAt": "2025-09-30T09:58:55.130Z",
+    "updatedAt": "2025-09-30T10:11:13.819Z"
+  }
+]
