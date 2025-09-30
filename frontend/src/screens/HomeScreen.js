@@ -19,6 +19,7 @@ const HomeScreen = () => {
     const fetchShops = async () => {
       try {
         const response = await fetch(createApiUrl('api/shops/approved'));
+        console.log('Fetching from:', createApiUrl('api/shops/approved')); // Debug log
         const data = await response.json();
 
         if (!response.ok) {
