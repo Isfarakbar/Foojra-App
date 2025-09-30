@@ -7,7 +7,16 @@ const mockDataPath = path.join(__dirname, '../data');
 
 const connectDB = async () => {
   try {
-    const conn = await mongoose.connect(process.env.MONGO_URI);
+    // Check if MONGO_URI is provided
+    if (!process.env.MONGO_URI) {
+      console.error('MONGO_URI environment variable is not set');
+      process.exit(1);
+    }
+
+    const conn = await mongoose.connect(process.env.MONGO_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
     
     console.log(`MongoDB Connected: ${conn.connection.host}`);
     
@@ -18,8 +27,8 @@ const connectDB = async () => {
     }
     
   } catch (error) {
-    console.error(`Error: ${error.message}`);
-    console.log('Failed to connect to MongoDB. Please ensure MongoDB is running.');
+    console.error(`Database connection error: ${error.message}`);
+    console.log('Failed to connect to MongoDB. Please check your MONGO_URI and network connection.');
     process.exit(1);
   }
 };

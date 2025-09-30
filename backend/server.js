@@ -30,6 +30,23 @@ app.use(express.urlencoded({ extended: false }));
 // Enable CORS
 app.use(cors());
 
+// Health check route
+app.get('/', (req, res) => {
+  res.json({ 
+    message: 'Foojra API is running!', 
+    status: 'success',
+    timestamp: new Date().toISOString()
+  });
+});
+
+app.get('/health', (req, res) => {
+  res.json({ 
+    status: 'healthy', 
+    uptime: process.uptime(),
+    timestamp: new Date().toISOString()
+  });
+});
+
 // Mount routers
 app.use('/api/users', userRoutes);
 app.use('/api/shops', shopRoutes);
