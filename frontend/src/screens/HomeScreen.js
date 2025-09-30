@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { createApiUrl } from '../utils/api';
 import { Row, Col, Container, Card, Button, Badge, Form, InputGroup } from 'react-bootstrap';
 import Loader from '../components/Loader';
 import Message from '../components/Message';
@@ -17,7 +18,7 @@ const HomeScreen = () => {
   useEffect(() => {
     const fetchShops = async () => {
       try {
-        const response = await fetch('/api/shops/approved');
+        const response = await fetch(createApiUrl('api/shops/approved'));
         const data = await response.json();
 
         if (!response.ok) {

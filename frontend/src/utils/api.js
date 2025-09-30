@@ -1,6 +1,6 @@
 // API configuration for different environments
 const API_BASE_URL = process.env.NODE_ENV === 'production' 
-  ? process.env.REACT_APP_API_URL || 'https://foojra-app-production.up.railway.app'
+  ? process.env.REACT_APP_API_URL || 'https://foojra-app-production.up.railway.app/api'
   : '';
 
 export const apiConfig = {
